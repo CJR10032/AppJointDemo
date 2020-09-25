@@ -25,7 +25,12 @@ dependencies {
 
     //  ConstraintLayout控件
     api 'androidx.constraintlayout:constraintlayout:2.0.1'
+    //  RecyclerView控件
+    api deps.support.recyclerview
     //  json解析框架
     api 'com.google.code.gson:gson:2.8.6'
+
+    //  组件化框架的库
+    api "io.github.prototypez:app-joint-core:1.7"
 
 }

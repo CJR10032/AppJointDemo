@@ -1,7 +1,8 @@
-package com.chaomeng.appjointdemo
+package com.chaomeng.appjointdemo.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.chaomeng.appjointdemo.R
 
 /**
  * 创建      CJR

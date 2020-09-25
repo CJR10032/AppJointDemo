@@ -12,17 +12,21 @@ import com.chaomeng.baselib.utils.Utils;
 public class BaseApplication extends Application {
 
     /**静态实例*/
-    protected static BaseApplication sInstance;
+    protected static Application sInstance;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        sInstance = this;
-        Utils.init(this);
+        sInstance = (Application) getApplicationContext();
+        Utils.init(sInstance);
     }
 
-    /**获取 KoApplication 实例*/
-    public static BaseApplication getInstance() {
+    /**
+     * 获取 Application 实例
+     *
+     * @return Application实例
+     */
+    public static Application getInstance() {
         return sInstance;
     }
 

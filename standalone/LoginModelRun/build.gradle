@@ -20,5 +20,6 @@ dependencies {
 
     //  公共基础库
     implementation project(":BaseLib")
-
+    //  登录组件
+    implementation project(":LoginModel")
 }
