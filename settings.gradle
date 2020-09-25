@@ -1,0 +1,13 @@
+//  登录工程的测试工程
+include ':standalone:LoginModelRun'
+//  登录工程
+include ':LoginModel'
+
+//  路由接口库
+include ':Router'
+//  主工程
+include ':app'
+//  基础库
+include ':BaseLib'
+//  项目名称
+rootProject.name = "AppJointDemo"

@@ -1,0 +1,28 @@
+apply plugin: 'com.android.application'
+//  组件化框架的插件
+apply plugin: 'app-joint'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+
+    defaultConfig {
+        applicationId "com.chaomeng.appjointdemo"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+
+    //  测试库
+    testImplementation deps.test.junit
+    androidTestImplementation deps.test.runner
+    androidTestImplementation deps.test.rules
+
+    //  公共基础库
+    implementation project(":BaseLib")
+    //  登录组件, 只在运行时加入
+    runtimeOnly(":LoginModel")
+}
