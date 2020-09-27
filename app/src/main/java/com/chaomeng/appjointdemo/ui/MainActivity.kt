@@ -23,7 +23,7 @@ class MainActivity : BaseActivity() {
         //  跳转登录页面
         btnTurnToLogin.setOnClickListener {
             //  跳转登录页面
-            Services.LoginModel.startLoginActivity(this)
+            Services.loginModel.startLoginActivity(this)
         }
     }
 }

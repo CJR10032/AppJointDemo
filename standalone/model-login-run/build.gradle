@@ -5,7 +5,7 @@ apply plugin: 'kotlin-android-extensions'
 android {
 
     defaultConfig {
-        applicationId "com.chaomeng.loginmodelrun"
+        applicationId "com.chaomeng.login_model_run"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -18,8 +18,6 @@ dependencies {
     androidTestImplementation deps.test.runner
     androidTestImplementation deps.test.rules
 
-    //  公共基础库
-    implementation project(":lib-base")
     //  登录组件
     implementation project(':model-login')
 }

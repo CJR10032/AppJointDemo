@@ -2,7 +2,7 @@ package com.chaomeng.loginmodel.serviceimpl
 
 import android.content.Context
 import android.content.Intent
-import com.chaomeng.loginmodel.ui.LoginActivity
+import com.chaomeng.loginmodel.ui.MainActivity
 import com.chaomeng.router.service.login.LoginModelService
 import io.github.prototypez.appjoint.core.ServiceProvider
 
@@ -17,6 +17,6 @@ open class LoginModelServiceImpl : LoginModelService {
 
     override fun startLoginActivity(ctx: Context) {
         //  跳转登录页面
-        ctx.startActivity(Intent(ctx, LoginActivity::class.java))
+        ctx.startActivity(Intent(ctx, MainActivity::class.java))
     }
 }

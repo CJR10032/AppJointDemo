@@ -14,6 +14,6 @@ object Services {
     /**
      * 登录组件提供的接口
      */
-    val LoginModel: LoginModelService = AppJoint.service(LoginModelService::class.java)
+    val loginModel: LoginModelService = AppJoint.service(LoginModelService::class.java)
 
 }

@@ -6,9 +6,20 @@
     android:orientation="vertical"
     tools:context=".ui.MainActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:text="这是独立运行的'登录'测试工程"
+        android:textColor="#333"
+        android:textSize="20sp"
+        tools:ignore="HardcodedText" />
+
     <Button
         android:id="@+id/btnTurnToLogin"
         style="@style/BtnStyle"
+        android:layout_marginTop="20dp"
         android:text="跳转登录页面"
         tools:ignore="HardcodedText" />
 

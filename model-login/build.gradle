@@ -4,6 +4,9 @@ apply plugin: 'kotlin-android-extensions'
 
 android {
 
+    //  统一规范资源名称前缀，防止多个 module 之间资源冲突
+    resourcePrefix "login_"
+
     defaultConfig {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -18,8 +21,8 @@ dependencies {
     androidTestImplementation deps.test.rules
 
     //  公共基础库
-    implementation project(":lib-base")
+    api project(":lib-base")
     //  路由接口库
-    implementation project(':router')
+    api project(':router')
 
 }

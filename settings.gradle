@@ -1,3 +1,7 @@
+//  '我的'组件的测试工程
+include ':standalone:model-mine-run'
+//  '我的'组件
+include ':model-mine'
 //  登录工程的测试工程
 include ':standalone:model-login-run'
 //  登录工程
