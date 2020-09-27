@@ -23,32 +23,32 @@ class BuglyUtil {
          * @param isDebug  是否debug模式
          */
         fun init(app: Application, isDebug: Boolean) {
-            LogUtils.d("初始化bugly相关配置")
+            LogUtils.e("初始化bugly相关配置")
 
             // 补丁回调接口
             Beta.betaPatchListener = object : BetaPatchListener {
                 override fun onPatchReceived(patchFile: String) {
-                    LogUtils.d("补丁下载地址：$patchFile")
+                    LogUtils.e("补丁下载地址：$patchFile")
                 }
 
                 override fun onDownloadReceived(savedLength: Long, totalLength: Long) {
-                    LogUtils.d("savedLength = ${savedLength}; totalLength = $totalLength")
+                    LogUtils.e("savedLength = ${savedLength}; totalLength = $totalLength")
                 }
 
                 override fun onDownloadSuccess(msg: String) {
-                    LogUtils.d("补丁下载成功")
+                    LogUtils.e("补丁下载成功")
                 }
 
                 override fun onDownloadFailure(msg: String) {
-                    LogUtils.d("补丁下载失败")
+                    LogUtils.e("补丁下载失败")
                 }
 
                 override fun onApplySuccess(msg: String) {
-                    LogUtils.d("补丁应用成功")
+                    LogUtils.e("补丁应用成功")
                 }
 
                 override fun onApplyFailure(msg: String) {
-                    LogUtils.d("补丁应用失败")
+                    LogUtils.e("补丁应用失败")
                 }
 
                 override fun onPatchRollback() {}
