@@ -9,6 +9,32 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
+    signingConfigs {
+        release {
+            storeFile file("../../cjr_code_key.jks")
+            storePassword 'qaz123'
+            keyAlias 'cjr_code_key'
+            keyPassword 'qaz123'
+        }
+        debug {
+            storeFile file("../../cjr_code_key.jks")
+            storePassword 'qaz123'
+            keyAlias 'cjr_code_key'
+            keyPassword 'qaz123'
+        }
+    }
+
+    buildTypes {
+        release {
+            //  签名文件
+            signingConfig signingConfigs.release
+        }
+        debug {
+            //  签名文件
+            signingConfig signingConfigs.debug
+        }
+    }
 }
 
 dependencies {
@@ -22,5 +48,4 @@ dependencies {
     implementation project(':model-mine')
     //  登录组件
     implementation project(':model-login')
-
 }
