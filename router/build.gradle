@@ -1,13 +1,10 @@
-apply plugin: 'com.android.application'
-//  组件化框架的插件
-apply plugin: 'app-joint'
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
 
     defaultConfig {
-        applicationId "com.chaomeng.appjointdemo"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -23,8 +20,4 @@ dependencies {
 
     //  公共基础库
     implementation project(":lib-base")
-    //  路由接口库
-    implementation project(':router')
-    //  登录组件, 只在运行时加入
-    runtimeOnly project(":model-login")
 }

@@ -1,13 +1,13 @@
 //  登录工程的测试工程
-include ':standalone:LoginModelRun'
+include ':standalone:model-login-run'
 //  登录工程
-include ':LoginModel'
+include ':model-login'
 
 //  路由接口库
-include ':Router'
+include ':router'
 //  主工程
 include ':app'
 //  基础库
-include ':BaseLib'
+include ':lib-base'
 //  项目名称
 rootProject.name = "AppJointDemo"

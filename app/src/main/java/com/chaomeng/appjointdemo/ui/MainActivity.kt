@@ -1,17 +1,29 @@
 package com.chaomeng.appjointdemo.ui
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import com.chaomeng.appjointdemo.R
+import com.chaomeng.appjointdemo.serviceimpl.Services
+import com.chaomeng.baselib.base.BaseActivity
+import kotlinx.android.synthetic.main.activity_main.*
 
 /**
  * 创建      CJR
  * 创建时间  2020/09/25 15:18
  * 描述      测试AppJoint的工程
  */
-class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+class MainActivity : BaseActivity() {
+
+    override fun onContentView() {
         setContentView(R.layout.activity_main)
+    }
+
+    override fun initData() {
+    }
+
+    override fun initListener() {
+        //  跳转登录页面
+        btnTurnToLogin.setOnClickListener {
+            //  跳转登录页面
+            Services.LoginModel.startLoginActivity(this)
+        }
     }
 }
