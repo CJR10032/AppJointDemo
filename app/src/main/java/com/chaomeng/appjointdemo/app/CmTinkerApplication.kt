@@ -2,8 +2,6 @@ package com.chaomeng.appjointdemo.app
 
 import com.tencent.tinker.loader.app.TinkerApplication
 import com.tencent.tinker.loader.shareutil.ShareConstants
-import io.github.prototypez.appjoint.core.AppSpec
-
 
 /**
  *
@@ -19,7 +17,6 @@ import io.github.prototypez.appjoint.core.AppSpec
  * 参数3：String loaderClassName  Tinker的加载器，使用默认即可
  * 参数4：boolean tinkerLoadVerifyFlag  加载dex或者lib是否验证md5，默认为false
  */
-@AppSpec
 class CmTinkerApplication : TinkerApplication(
     ShareConstants.TINKER_ENABLE_ALL,
     "com.chaomeng.appjointdemo.app.App",

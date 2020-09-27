@@ -9,7 +9,9 @@ import android.app.Application;
  */
 public class BaseModelApplication extends Application {
 
-    /**静态实例*/
+    /**
+     * 静态实例
+     */
     protected static Application sInstance;
 
     @Override
