@@ -21,7 +21,7 @@ buildscript {
         classpath deps.kotlin_gradle_plugin
 
         //  tinkersupport插件, 其中lastest.release指拉取最新版本，也可以指定明确版本号，例如1.0.4
-        classpath "com.tencent.bugly:tinker-support:1.1.5"
+        classpath "com.tencent.bugly:tinker-support:1.2.0"
         //  组件化框架的依赖
         classpath 'io.github.prototypez:app-joint:1.7'
 
