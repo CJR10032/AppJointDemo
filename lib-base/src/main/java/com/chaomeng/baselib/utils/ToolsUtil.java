@@ -3,7 +3,7 @@ package com.chaomeng.baselib.utils;
 import android.annotation.SuppressLint;
 import android.widget.Toast;
 
-import com.chaomeng.baselib.app.BaseApplication;
+import com.chaomeng.baselib.base.BaseModelApplication;
 
 /**
  * 创建者     CJR
@@ -26,7 +26,7 @@ public class ToolsUtil {
         if (s == null) {
             return;
         }
-        mToast = Toast.makeText(BaseApplication.getInstance(),
+        mToast = Toast.makeText(BaseModelApplication.getInstance(),
                 null, Toast.LENGTH_SHORT);
         mToast.setText(s);
         //  显示toast信息
@@ -42,7 +42,7 @@ public class ToolsUtil {
     public static void doToast(int stringRes) {
         String str;
         try {
-            str = BaseApplication.getInstance()
+            str = BaseModelApplication.getInstance()
                     .getResources().getString(stringRes);
         } catch (Exception ignore) {
             str = String.valueOf(stringRes);

@@ -10,7 +10,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 
-import com.chaomeng.baselib.app.BaseApplication;
+import com.chaomeng.baselib.base.BaseModelApplication;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -91,7 +91,7 @@ public final class Utils {
      * @return application实例
      */
     public static Application getApp() {
-        return BaseApplication.getInstance();
+        return BaseModelApplication.getInstance();
     }
 
     /**

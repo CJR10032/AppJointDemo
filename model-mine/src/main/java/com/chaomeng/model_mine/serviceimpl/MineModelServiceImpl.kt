@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import com.chaomeng.model_mine.ui.MineCenterActivity
 import com.chaomeng.router.service.mine.MineModelService
+import io.github.prototypez.appjoint.core.ServiceProvider
 
 
 /**
@@ -11,6 +12,7 @@ import com.chaomeng.router.service.mine.MineModelService
  * 创建时间   2020/9/27 10:02
  * 描述       "我的"模块接口的实现
  */
+@ServiceProvider
 class MineModelServiceImpl : MineModelService {
 
     override fun startMineActivity(ctx: Context) {

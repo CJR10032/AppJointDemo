@@ -12,7 +12,7 @@ import com.chaomeng.model_mine.R
 class MineCenterActivity : BaseActivity() {
 
     override fun onContentView() {
-        setContentView(R.layout.activity_mine_center)
+        setContentView(R.layout.mine_activity_mine_center)
     }
 
     override fun initData() {

@@ -25,5 +25,11 @@ class MainActivity : BaseActivity() {
             //  跳转登录页面
             Services.loginModelService.startLoginActivity(this)
         }
+
+        //  跳转个人中心页面
+        btnTurnToMineCenter.setOnClickListener {
+            //  跳转个人中心
+            //  Services.mineModelService.startMineActivity(this)
+        }
     }
 }

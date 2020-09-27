@@ -12,4 +12,10 @@
         android:text="跳转登录页面"
         tools:ignore="HardcodedText" />
 
+    <Button
+        android:id="@+id/btnTurnToMineCenter"
+        style="@style/BtnStyle"
+        android:text="跳转个人中心页面"
+        tools:ignore="HardcodedText" />
+
 </LinearLayout>

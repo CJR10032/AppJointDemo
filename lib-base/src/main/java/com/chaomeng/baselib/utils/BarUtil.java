@@ -13,7 +13,7 @@ import android.view.WindowManager;
 import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 
-import com.chaomeng.baselib.app.BaseApplication;
+import com.chaomeng.baselib.base.BaseModelApplication;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -144,7 +144,7 @@ public final class BarUtil {
      */
     @SuppressWarnings("WeakerAccess")
     public static int getStatusBarHeight() {
-        Resources resources = BaseApplication.getInstance().getResources();
+        Resources resources = BaseModelApplication.getInstance().getResources();
         int resourceId = resources.getIdentifier("status_bar_height"
                 , "dimen", "android");
         return resources.getDimensionPixelSize(resourceId);

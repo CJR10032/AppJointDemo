@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : BaseActivity() {
 
     override fun onContentView() {
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.login_activity_main)
     }
 
     override fun initData() {

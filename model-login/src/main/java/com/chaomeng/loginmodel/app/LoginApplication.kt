@@ -1,6 +1,6 @@
 package com.chaomeng.loginmodel.app
 
-import com.chaomeng.baselib.app.BaseApplication
+import com.chaomeng.baselib.base.BaseModelApplication
 import com.chaomeng.baselib.utils.LogUtils
 import io.github.prototypez.appjoint.core.ModuleSpec
 
@@ -11,7 +11,7 @@ import io.github.prototypez.appjoint.core.ModuleSpec
  * 描述       登录组件的application
  */
 @ModuleSpec(priority = 1)
-open class LoginApplication : BaseApplication() {
+open class LoginApplication : BaseModelApplication() {
 
     override fun onCreate() {
         super.onCreate()
