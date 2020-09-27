@@ -16,8 +16,11 @@ object Services {
     /**
      * 登录组件提供的接口
      */
-    val loginModel: LoginModelService = LoginModelServiceImpl()
+    val loginModelService: LoginModelService = LoginModelServiceImpl()
 
-    val mineModel: MineModelService = MineModelServiceImpl()
+    /**
+     * '我的'组件提供的接口
+     */
+    val mineModelService: MineModelService = MineModelServiceImpl()
 
 }

@@ -22,7 +22,7 @@ class MainActivity : BaseActivity() {
     override fun initListener() {
         //  跳转登录页面按钮的点击事件
         btnTurnToLogin.setOnClickListener {
-            Services.loginModel.startLoginActivity(this)
+            Services.loginModelService.startLoginActivity(this)
         }
     }
 

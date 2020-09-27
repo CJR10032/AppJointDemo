@@ -22,12 +22,12 @@ class MainActivity : BaseActivity() {
     override fun initListener() {
         //  跳转登录页面
         btnTurnToLogin.setOnClickListener {
-            Services.loginModel.startLoginActivity(this)
+            Services.loginModelService.startLoginActivity(this)
         }
 
         //  跳转个人中心
         btnTurnToMineCenter.setOnClickListener {
-            Services.mineModel.startMineActivity(this)
+            Services.mineModelService.startMineActivity(this)
         }
     }
 

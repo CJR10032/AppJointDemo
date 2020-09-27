@@ -14,6 +14,6 @@ object Services {
     /**
      * 登录组件提供的接口
      */
-    val loginModel: LoginModelService = LoginModelServiceImpl()
+    val loginModelService: LoginModelService = LoginModelServiceImpl()
 
 }
