@@ -3,6 +3,7 @@ package com.chaomeng.appjointdemo.base
 import android.app.Application
 import android.content.Context
 import android.content.Intent
+import android.content.res.Configuration
 import androidx.multidex.MultiDex
 import com.chaomeng.appjointdemo.BuildConfig
 import com.chaomeng.appjointdemo.utils.BuglyUtil
@@ -10,6 +11,7 @@ import com.chaomeng.baselib.utils.LogUtils
 import com.chaomeng.baselib.utils.Utils
 import com.tencent.bugly.beta.Beta
 import com.tencent.tinker.entry.DefaultApplicationLike
+import io.github.prototypez.appjoint.AppJoint
 
 
 /**
@@ -34,6 +36,8 @@ abstract class AbstractApp(
     override fun onCreate() {
         super.onCreate()
 
+        AppJoint.get().onCreate()
+
         LogUtils.e("app init is called")
         //  初始化Bugly
         BuglyUtil.init(application, BuildConfig.DEBUG)
@@ -43,10 +47,32 @@ abstract class AbstractApp(
 
     override fun onBaseContextAttached(base: Context) {
         super.onBaseContextAttached(base)
-
         //  you must install multiDex whatever tinker is installed!
         MultiDex.install(base)
         //  安装tinker
         Beta.installTinker(this)
+
+        AppJoint.get().attachBaseContext(base)
     }
+
+    override fun onConfigurationChanged(configuration: Configuration) {
+        super.onConfigurationChanged(configuration)
+        AppJoint.get().onConfigurationChanged(configuration)
+    }
+
+    override fun onLowMemory() {
+        super.onLowMemory()
+        AppJoint.get().onLowMemory()
+    }
+
+    override fun onTerminate() {
+        super.onTerminate()
+        AppJoint.get().onTerminate()
+    }
+
+    override fun onTrimMemory(i: Int) {
+        super.onTrimMemory(i)
+        AppJoint.get().onTrimMemory(i)
+    }
+
 }

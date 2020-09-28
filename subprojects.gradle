@@ -14,14 +14,10 @@ subprojects { project ->
                 }
 
                 lintOptions {
-                    abortOnError true
-                    disable 'GradleDependency'
-                    disable 'InvalidPackage'
-                    disable 'TypographyDashes'
-                    disable 'TypographyFractions'
-                    disable 'LabelFor'
-                    disable 'IconLauncherShape'
-                    disable 'IconMissingDensityFolder'
+                    checkReleaseBuilds false
+                    // Or, if you prefer, you can continue to check for errors in release builds,
+                    // but continue the build even when errors are found:
+                    abortOnError false
                 }
 
 
@@ -50,12 +46,12 @@ subprojects { project ->
         if (project.plugins.hasPlugin('com.android.library')) {
             android {
                 buildTypes {
-                    release {
-                        minifyEnabled true
-                        consumerProguardFiles 'proguard-rules.pro'
-                    }
                     debug {
                         minifyEnabled false
+                        consumerProguardFiles 'proguard-rules.pro'
+                    }
+                    release {
+                        minifyEnabled true
                         consumerProguardFiles 'proguard-rules.pro'
                     }
                 }
@@ -86,14 +82,12 @@ subprojects { project ->
                         zipAlignEnabled true
                         shrinkResources true
                         minifyEnabled true
+                        // Zipalign优化
+                        zipAlignEnabled true
                         proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
                     }
                 }
 
-                dexOptions {
-                    javaMaxHeapSize "4g"
-                    jumboMode = true
-                }
             }
         }
     }

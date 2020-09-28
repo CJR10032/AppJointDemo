@@ -28,3 +28,6 @@
 -keep class com.tencent.tinker.** { *; }
 
  -keep class android.support.**{*;}
+
+# AppJoint
+-keep class io.github.prototypez.appjoint.AppJointResult {*;}
