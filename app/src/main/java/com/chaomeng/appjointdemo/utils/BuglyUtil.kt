@@ -57,9 +57,9 @@ class BuglyUtil {
             //  设置开发设备
             Bugly.setIsDevelopmentDevice(app, true)
             if (isDebug) {
-                Bugly.init(app, "c446ae04d0", isDebug)
+                Bugly.init(app, "c446ae04d0", true)
             } else {
-                Bugly.init(app, "c446ae04d0", isDebug)
+                Bugly.init(app, "c446ae04d0", true)
             }
         }
     }
