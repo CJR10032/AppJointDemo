@@ -23,7 +23,9 @@ class MainActivity : BaseActivity() {
         //  跳转登录页面
         btnTurnToLogin.setOnClickListener {
             //  跳转登录页面
-            Services.loginModelService.startLoginActivity(this)
+            Services.loginModelService.startLoginActivity(this) {
+                showMessage("result = $it")
+            }
         }
 
         //  跳转个人中心页面

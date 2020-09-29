@@ -1,6 +1,6 @@
 package com.chaomeng.router.service.login
 
-import android.content.Context
+import androidx.activity.ComponentActivity
 
 
 /**
@@ -13,7 +13,11 @@ interface LoginModelService {
     /**
      * 跳转登录页面的方法
      *
-     * @param ctx Context实例
+     * @param activity ComponentActivity实例
+     * @param callback 登录页面返回的结果, userName表示用户名
      */
-    fun startLoginActivity(ctx: Context)
+    fun startLoginActivity(
+        activity: ComponentActivity,
+        callback: (userName: String) -> Unit
+    )
 }

@@ -33,12 +33,6 @@ public abstract class BaseActivity extends AppCompatActivity
         initListener();
     }
 
-    @Override
-    protected void onStop() {
-        super.onStop();
-        cancelToast();
-    }
-
     /**填充layout*/
     protected abstract void onContentView();
 

@@ -1,8 +1,10 @@
 package com.chaomeng.loginmodel.serviceimpl
 
-import android.content.Context
+import android.app.Activity
 import android.content.Intent
-import com.chaomeng.loginmodel.ui.MainActivity
+import androidx.activity.ComponentActivity
+import androidx.activity.result.contract.ActivityResultContracts
+import com.chaomeng.loginmodel.ui.LoginActivity
 import com.chaomeng.router.service.login.LoginModelService
 import io.github.prototypez.appjoint.core.ServiceProvider
 
@@ -15,8 +17,20 @@ import io.github.prototypez.appjoint.core.ServiceProvider
 @ServiceProvider
 open class LoginModelServiceImpl : LoginModelService {
 
-    override fun startLoginActivity(ctx: Context) {
-        //  跳转登录页面
-        ctx.startActivity(Intent(ctx, MainActivity::class.java))
+
+    override fun startLoginActivity(
+        activity: ComponentActivity,
+        callback: (userName: String) -> Unit
+    ) {
+        //  注册监听回调
+        activity.registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+            if (it.resultCode == Activity.RESULT_OK) {
+                //  回调页面返回结果
+                callback.invoke(it.data?.getStringExtra(LoginActivity.USER_NAME_EXTRA) ?: "")
+            }
+        }
+            //  跳转页面
+            .launch(Intent(activity, LoginActivity::class.java))
+
     }
 }

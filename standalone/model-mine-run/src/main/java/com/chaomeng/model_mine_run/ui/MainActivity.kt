@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : BaseActivity() {
 
     override fun onContentView() {
-        setContentView(R.layout.login_activity_main)
+        setContentView(R.layout.login_activity_login)
     }
 
     override fun initData() {
@@ -22,7 +22,9 @@ class MainActivity : BaseActivity() {
     override fun initListener() {
         //  跳转登录页面
         btnTurnToLogin.setOnClickListener {
-            Services.loginModelService.startLoginActivity(this)
+            Services.loginModelService.startLoginActivity(this) {
+                showMessage("result = $it")
+            }
         }
 
         //  跳转个人中心
