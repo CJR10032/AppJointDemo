@@ -15,7 +15,7 @@
     <Button
         android:id="@+id/btnTurnToMineCenter"
         style="@style/BtnStyle"
-        android:text="跳转个人中心页面"
+        android:text="跳转新增页面"
         tools:ignore="HardcodedText" />
 
 </LinearLayout>

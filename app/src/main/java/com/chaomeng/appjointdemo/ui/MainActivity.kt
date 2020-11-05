@@ -31,7 +31,8 @@ class MainActivity : BaseActivity() {
         //  跳转个人中心页面
         btnTurnToMineCenter.setOnClickListener {
             //  跳转个人中心
-            Services.mineModelService.startMineActivity(this)
+            //  Services.mineModelService.startMineActivity(this)
+            startActivity(TwoActivity::class.java)
         }
     }
 }
