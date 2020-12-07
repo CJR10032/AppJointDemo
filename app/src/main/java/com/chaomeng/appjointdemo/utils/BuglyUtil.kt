@@ -40,15 +40,15 @@ class BuglyUtil {
                 }
 
                 override fun onDownloadFailure(msg: String) {
-                    LogUtils.e("补丁下载失败")
+                    LogUtils.e("补丁下载失败:$msg")
                 }
 
                 override fun onApplySuccess(msg: String) {
-                    LogUtils.e("补丁应用成功")
+                    LogUtils.e("补丁应用成功:$msg")
                 }
 
                 override fun onApplyFailure(msg: String) {
-                    LogUtils.e("补丁应用失败")
+                    LogUtils.e("补丁应用失败:$msg")
                 }
 
                 override fun onPatchRollback() {}
